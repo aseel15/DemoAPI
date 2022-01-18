@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     public void btnDecorateOnClick(View view) {
         //call volly
         imagesList=new ArrayList<>();
-        String url ="https://api.unsplash.com/search/photos?client_id=a343tF8cTQJPm3NR2LZhMbZf0QUOLZ-MlOAw0GI2njQ&page=1&per_page=30&query=wedding%20decorate";
+        String url ="https://api.unsplash.com/search/photos?client_id=a343tF8cTQJPm3NR2LZhMbZf0QUOLZ-MlOAw0GI2njQ&page=1&per_page=30&query=wedding%20decoration";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.GET, url,
                         null, new Response.Listener<JSONObject>() {
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
 
-                       
+
 
                         recycler.setLayoutManager(new LinearLayoutManager(MainActivity.this));
                         CationImage adapter = new CationImage(MainActivity.this, imagesList);
